@@ -2,6 +2,7 @@
   <h4><%= discussion.name %></h4>
   Pinned: <%= discussion.pinned %> | Closed: <%= discussion.closed %>
   <div>
-    <%= link_to "Edit", edit_discussion_path(discussion) %>
+    <%= link_to "Edit", edit_discussion_path(discussion) %> |
+    <%= link_to "Remove", discussion, method: :delete, data: { confirm: "Are you sure? This can not be undone." } %>
   </div>
 </div>

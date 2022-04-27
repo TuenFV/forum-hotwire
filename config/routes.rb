@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   root 'home#index'
   devise_for :users
-  resources :discussions, only: [:index, :new, :create, :edit, :update]
+  resources :discussions, only: [:index, :new, :create, :edit, :update, :destroy]
 end
